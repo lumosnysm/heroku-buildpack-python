@@ -15,6 +15,8 @@
 # Fail fast and fail hard.
 set -eo pipefail
 
+export CFLAGS="-Wno-narrowing"
+
 # Boostrap the Buildpack Standard Library.
 export BPLOG_PREFIX="buildpack.python"
 export BUILDPACK_LOG_FILE=${BUILDPACK_LOG_FILE:-/dev/null}
